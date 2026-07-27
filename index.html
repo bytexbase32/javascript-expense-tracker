@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense tracker app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header id="header">
+            <h1>Expense Tracker</h1>
+            <div id="total">
+                <p>total Spent</p>
+                <div id="total-spent">$0.00</div>
+            </div>
+        </header>
+        <section id="form">
+            <h2>Add Expense</h2>
+            <form id="add-expense">
+                <input type="hidden" id="index" value="-1">
+                <div>
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" placeholder="Coffee">
+                </div>
+                <div>
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" placeholder="12.50" min="0"
+    step="0.01">
+                </div>
+                <div>
+                    <label for="expense-category">Category:</label>
+                    <select id="expense-category">
+                        <option value="">Choose your category</option>
+                        <option value="food">Food</option>
+                        <option value="transport">Transport</option>
+                        <option value="shopping">Shopping</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="bills">Bills</option>
+                        <option value="health">Health</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="date">Date:</label>
+                    <input type="date" id="date">
+                </div>
+
+                <input type="submit" value="Add Expense" id="submit">
+
+            </form>
+        </section>
+        <section id="controls">
+            <h2>Find Expenses</h2>
+            <div>
+                <label for="search">Search</label>
+                <input type="text" id="search" placeholder="Search by title...">
+            </div>
+            <div>
+                <label for="filter-category">Filter:</label>
+                <select id="filter-category">
+                    <option value="all">All</option>
+                    <option value="food">Food</option>
+                    <option value="transport">Transport</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="bills">Bills</option>
+                    <option value="health">Health</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div>
+                <label for="sort">Sort:</label>
+                <select id="sort">
+                    <option value="default">Default</option>
+                    <option value="oldest">Oldest</option>
+                    <option value="newest">Newest</option>
+                    <option value="amountInc">Amount ↑</option>
+                    <option value="amountDecr">Amount ↓</option>
+                    <option value="titleAZ">Title A-Z</option>
+                    <option value="titleZA">Title Z-A</option>
+                </select>
+            </div>
+        </section>
+        <section id="expenses">
+            <h2>Your Expenses</h2>            
+            <p id="error"></p>
+            <p id="empty-state">
+                No expenses yet.
+            </p>
+            
+            <!-- Expenses will be added here -->
+            
+            <!-- <div class="expense">
+                <h3>Coffee</h3>
+                <p>Food</p>
+                <p>5.13$</p>
+                <p>July 25, 2026</p>
+                <div class="actions">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </div> -->
+            
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

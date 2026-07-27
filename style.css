@@ -1,0 +1,244 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background: #f3f4f6;
+    padding: 20px 0;
+}
+
+.container {
+    width: min(1200px, 95%);
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom:15px;
+}
+
+#header{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:20px;
+}
+
+h1 {
+    font-size:36px;
+    font-weight:700;
+}
+
+#total{
+    min-width:260px;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+
+    padding:15px 20px;
+
+    border-radius:10px;
+    background: #0f38bc;
+    color: white;
+}
+
+#total p {
+    font-size: 13px;
+    text-transform: uppercase;
+    opacity: .8;
+}
+
+#total-spent {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+#form {
+    width: 100%;
+    background: white;
+    padding:8px 12px;
+    border-radius: 10px;
+}
+
+#form div {
+    flex-direction: column;
+    align-items: stretch;
+}   
+
+#form div {
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+#form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    font-size: 16px;
+}
+
+input {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+select {
+    padding: 12px;
+}
+
+
+#submit {
+    background-color: rgb(9, 155, 9);
+    color: white;
+    border: none;
+    display: block;
+    margin-right: 0px;
+    width:180px;
+    margin-left:auto;
+}
+input:focus, select:focus  {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,120,255,.15);
+}
+
+button:hover,
+input[type="submit"]:hover {
+    opacity: .9;
+}
+
+button,
+input[type="submit"] {
+    cursor: pointer;
+}
+
+
+#controls {
+    width: 100%;
+    background: white;
+    padding: 18px 20px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+}
+
+#controls div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#controls label {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#controls input,
+#controls select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 15px;
+}
+
+#expenses {
+    width: 100%;
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    min-height:350px;
+}
+
+
+#empty-state {
+    margin: 15px 0;
+}
+
+#error {
+    margin: 15px 0;
+    color: red;
+    font-weight: bold;
+    display: none;
+    text-align: center;
+}
+
+.expense {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    gap: 10px;
+    font-size: 16px;
+    border-bottom:1px solid #e5e5e5;
+
+    background: white;
+    padding:18px 8px;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.expense:hover {
+    background:#dce7f2;
+}
+
+.expense h3 {
+    flex:2;
+}
+
+.expense p {
+    flex:1;
+}
+
+.actions  {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn {
+    border: none;
+    background-color: rgb(8, 90, 142);
+    border-radius: 8px;
+    color: white;
+    padding:8px 14px;
+    font-size:14px;
+}
+
+.delete-btn {
+    border: none;
+    background-color: rgb(174, 4, 4);
+    border-radius: 8px;
+    color: white;
+    padding:8px 14px;
+    font-size:14px;
+}
+
+
+#form,
+#controls,
+#expenses {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+
+input,
+select {
+    height:44px;
+}
